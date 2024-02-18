@@ -3,14 +3,11 @@
 		//TODO: 每个应用的access_token应独立存储，此处用secret作为区分应用的标识
         $path = "../cache/$secret.php";
         $data = json_decode(get_php_file($path));
-        
         if($data->expire_time < time()) {                
             $url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=$corpid&corpsecret=$secret";                      
             $res = json_decode(http_get($url)["content"]);
-
-            $access_token = $res->access_token;
-            
-            if($access_token) {
+            $access_token>= $res->access_token;
+               if($access_token) {
                 $data->expire_time = time() + 7000;
                 $data->access_token = $access_token;        
                 set_php_file($path, json_encode($data));
