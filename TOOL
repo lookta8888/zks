@@ -1,17 +1,12 @@
 import requests
 from lxml import etree
-
 url='https://www.XXX.com/'
-
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36',
            'Referer': 'https://www.XXX.com/'}
-
 def get_data(url):
     response = requests.get(url, headers=headers)
     response.encoding = 'utf-8'
     selector = etree.HTML(response.text)
     content = selector.xpath('//*[@id="newpcnews-1"]/div/div[2]/a[1]/div/text()')  
     print(content)
-
-
 get_data(url)
