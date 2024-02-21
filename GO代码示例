@@ -1,9 +1,6 @@
 package main // 指定当前源文件所在的包名
-
 import "math/rand" // 引入一个标准库包
-
 const MaxRand = 16 // 声明一个具名整型常量
-
 // 一个函数声明
 /*
  StatRandomNumbers生成一些不大于MaxRand的非负
