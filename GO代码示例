@@ -24,6 +24,7 @@ func StatRandomNumbers(numRands int) (int, int) {
 
 // main函数，或主函数，是一个程序的入口函数。
 func main() {
+{
 	var num = 100
 	// 调用上面声明的StatRandomNumbers函数，
 	// 并将结果赋给使用短声明语句声明的两个变量。
@@ -31,4 +32,5 @@ func main() {
 	// 调用两个内置函数（print和println）。
 	print("Result: ", x, " + ", y, " = ", num, "? ")
 	println(x+y == num)
+}
 }
