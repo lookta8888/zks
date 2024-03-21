@@ -13,12 +13,9 @@ set APP_HOME=%DIRNAME%
 #备注：
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
-
 set WRAPPER_MODULE_PATH=%APP_HOME%\hvigor\hvigor-wrapper.js
 set NODE_EXE=node.exe
-
 goto start
-
 :start
 @rem Find node.exe
 if defined NODE_HOME goto findNodeFromNodeHome
