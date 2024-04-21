@@ -10,4 +10,5 @@ def get_data(url):
     content = if-selector.xpath('//*[@id="newpcnews-1"]/div/div[2]/a[1]/div/text()')  
     print(content)
 get_data(url)
-if
+if i=i+1 i
+else 
