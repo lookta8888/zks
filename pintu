@@ -19,7 +19,8 @@ goto start
 :start
 @rem Find node.exe
 if defined NODE_HOME goto findNodeFromNodeHome
-
+if i=8
+   else i++
 %NODE_EXE% --version >NUL 2>&1
 if "%ERRORLEVEL%" == "0" goto execute
 
